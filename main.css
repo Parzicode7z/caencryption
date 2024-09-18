@@ -1,0 +1,134 @@
+*  {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(assets/office_theme_pixel.png);
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+nav {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+    background-color: #2a3e5e;
+    font-size: 2vw;
+    letter-spacing: 5px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #36393e;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.card textarea {
+    
+    background: #36393e;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    resize: none;
+    width: 100%;
+    padding: 5vh 0;
+}
+
+.card textarea::placeholder {
+    color: whitesmoke;
+}
+
+.card textarea:focus {
+    outline: none;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.card .buttons-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.card .buttons-input .enconum {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.card .buttons-input .enconum input{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.quantity {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.btn-dec {
+    padding: 5px;
+    margin: 5px;
+    color: whitesmoke;
+    background-color: #04de3e;
+    border-radius: 15px;
+}
+
+.btn-dec:hover {
+    background-color: #06c439;
+    border: 2px solid #07f7ef;
+}
+
+.btn-enc {
+    padding: 5px;
+    margin: 5px;
+    color: whitesmoke;
+    background-color: #b50707;
+    border-radius: 15px;
+}
+
+.btn-enc:hover {
+    background-color: #8f0303;
+    border: 2px solid #07f7ef;
+}
+
+
+.card pre {
+    padding: 10px;
+    color: whitesmoke;
+}
+
+
+@media only screen and (max-width: 650px) {
+    /*Bu bloğun en altta olması gerekli (akış)*/
+    .card .buttons-input{
+        flex-direction: column;
+    }
+}

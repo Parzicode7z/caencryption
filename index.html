@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Encryption</title>
+    <link rel="icon" type="favicon" href="assets/enigma.ico">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <h1>Caesar Encryption</h1>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <textarea name="content" id="desc" class="textar" rows="5" placeholder="Şifrelenecek veriyi giriniz."></textarea>
+
+            <div class="buttons-input">
+                <div class="enconum">
+                    <label class="quantity">Kaydırma miktarı (1-100):</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100">
+                </div>
+                <div class="buttons">
+                    <button id="encbtn" class="btn-enc" onclick="showData(true)">Encryption</button>
+                    <button id="decbtn" class="btn-dec" onclick="showData(false)">Decryption</button>
+                </div>
+            </div>
+            <textarea id="#showdata" placeholder="Şifrelenmiş veri buraya gelecek."></textarea>
+        </div>
+    </div>
+    <script src="backgr.js"></script>
+</body>
+</html>
