@@ -3,6 +3,7 @@
 
 const charlie = ["a", "b", "c", "ç", "d", "e", "f", "g", "ğ", "h", "ı", "i", "j", "k", "l", "m", "n", "o", "ö", "p", "r", "s", "ş", "t", "u", "ü", "v", "y", "z"];
 const bigCharlie = ["A", "B", "C", "Ç", "D", "E", "F", "G", "Ğ", "H", "I", "İ", "J", "K", "L", "M", "N", "O", "Ö", "P", "R", "S", "Ş", "T", "U", "Ü", "V", "Y", "Z"]
+const textarea = document.getElementById('desc');
 
 function isUpperCase(str) {
     return str === str.toUpperCase();
@@ -52,6 +53,16 @@ function enCrypt(endec, enco = 1, array) { // Encrypt mode if endec true, if isn
 };
 
 //enCrypt(false, 3, "ÖğtJçdç");
+// Şifrelenecek veriyi girme kısmına tıklayınca placeholderi yok edecek.
+textarea.addEventListener('focus', function() {
+    this.placeholder = '';
+});
+
+textarea.addEventListener('blur', function() {
+    if (this.value === '') {
+        this.placeholder = 'Şifrelenecek veriyi girin.'; // İsterseniz varsayılan placeholder'ı geri ekleyebilirsiniz.
+    }
+});
 
 function showData(ed) {
     let array = ((document.getElementById("desc")||{}).value)||"";
